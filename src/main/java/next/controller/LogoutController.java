@@ -1,10 +1,10 @@
 package next.controller;
 
+import core.mvc.Controller;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import core.mvc.Controller;
 
 public class LogoutController implements Controller {
     @Override
