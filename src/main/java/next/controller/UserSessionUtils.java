@@ -9,9 +9,11 @@ public class UserSessionUtils {
 
     public static User getUserFromSession(HttpSession session) {
         Object user = session.getAttribute(USER_SESSION_KEY);
+
         if (user == null) {
             return null;
         }
+
         return (User) user;
     }
 
@@ -19,6 +21,7 @@ public class UserSessionUtils {
         if (getUserFromSession(session) == null) {
             return false;
         }
+
         return true;
     }
 

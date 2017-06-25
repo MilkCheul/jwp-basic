@@ -19,6 +19,7 @@ public class ConnectionManager {
         ds.setUrl(DB_URL);
         ds.setUsername(DB_USERNAME);
         ds.setPassword(DB_PW);
+
         return ds;
     }
 

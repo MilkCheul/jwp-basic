@@ -45,6 +45,7 @@ public class DispatcherServlet extends HttpServlet {
             throws ServletException, IOException {
         if (viewName.startsWith(DEFAULT_REDIRECT_PREFIX)) {
             resp.sendRedirect(viewName.substring(DEFAULT_REDIRECT_PREFIX.length()));
+
             return;
         }
 

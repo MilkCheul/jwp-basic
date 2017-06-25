@@ -19,6 +19,7 @@ public class CreateUserController implements Controller {
                 req.getParameter("email"));
 
         UserDao userDao = new UserDao();
+
         try{
             userDao.insert(user);
         } catch(SQLException e){
