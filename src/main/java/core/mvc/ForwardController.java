@@ -4,9 +4,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class ForwardController implements Controller {
-    private String forwardUrl;
+    private ModelAndView forwardUrl;
 
-    public ForwardController(String forwardUrl) {
+    public ForwardController(ModelAndView forwardUrl) {
         this.forwardUrl = forwardUrl;
         if (forwardUrl == null) {
             throw new NullPointerException("forwardUrl is null. 이동할 URL을 입력하세요.");
@@ -14,7 +14,7 @@ public class ForwardController implements Controller {
     }
 
     @Override
-    public String execute(HttpServletRequest req, HttpServletResponse resp) throws Exception {
+    public ModelAndView execute(HttpServletRequest req, HttpServletResponse resp) throws Exception {
         return forwardUrl;
     }
 }
